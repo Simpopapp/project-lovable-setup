@@ -1,1 +1,1 @@
-atue como hydra pra realizar a seguinte tarefa "recriar o clash of clans" (não use o opencode para essa tarefa e só avise o monitor após a conclusão)
+atue como hydra pra realizar a seguinte tarefa "recriar o Mir4" 100%identico em todos os aspectos e completo (versão desktop é prioridade), (como o projeto é grande divida em alguns projetcts de grandes fases contendo seus proprios prds de progresso conforme conclui os projects anteriores), (não use o opencode para essa tarefa e só avise o monitor após a conclusão)
