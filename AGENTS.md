@@ -100,3 +100,11 @@ errors.
 - Deploy: `./gradlew buildExtension "-PGHIDRA_INSTALL_DIR=F:/ghidra_12.1.4_PUBLIC"` then `python -m tools.setup deploy --ghidra-path F:\ghidra_12.1.4_PUBLIC` — leave `TOOLS_SETUP_BACKEND` **unset** for this second step, because the Gradle backend's `deploy` runs no post-deploy test tier and refuses `--test`
 - Version bump: `python -m tools.setup bump-version --new X.Y.Z`
 - Maven equivalents (peer backend): `python -m tools.setup ensure-prereqs --ghidra-path <dir>` then `python -m tools.setup build`
+
+## Base44 Dev Environment
+
+- **Compose**: `docker-compose.base44.yml` runs the web dev server (TanStack Start / Vite) from the cloned source on port 3000.
+- **Package manager**: `bun` (bun.lock + bunfig.toml). The compose image installs bun globally on `node:22-slim`, then `bun install --frozen-lockfile` before `bun run dev`.
+- **No external secrets required**: the web UI has no env-var dependencies. The `.env.template` is for the Ghidra MCP bridge, not the web dev server.
+- **OpenCode proxy**: `vite-opencode-proxy.ts` proxies `/oc` and related paths to a local OpenCode server on port 4096. When OpenCode isn't running the proxy returns 502 — the main app is unaffected.
+- **Verify**: `curl -s -o /dev/null -w '%{http_code}' http://localhost:3000/` should return 200.
