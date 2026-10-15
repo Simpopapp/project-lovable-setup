@@ -66,7 +66,7 @@ You are a coding agent working on **ghidra-mcp**, a Model Context Protocol serve
 ## Remix & Project Monitor
 
 - **Ativação de Remix**: Um remix é ativado quando se recebe o comando:
-  `"I've successfully remixed this project. What would be a good next step?"`
+  `"I've successfully remixed this project. What would be a good next step?", "Set up and run this project so I can see it working in the preview. Read the code, figure out what it needs, and bring it up with docker compose. If it needs credentials for an external service, ask me for them." ou algo similar, não se limitando aos termos exatos`
 - **Project Monitor e Plan Obrigatórios**: Para iniciar um remix é obrigatório usar o **project monitor** e seguir rigorosamente as regras de [.opencode/Plan.md](file:///.opencode/Plan.md) para evitar bugs e erros no projeto.
 - **Protocolo dos 3 Arquivos** ([.opencode/Plan.md](file:///.opencode/Plan.md)):
   - O trabalho agentico de remix é guiado por `project{N}` (Planejamento), `prd-project{N}` (PRD) e `roadmap-proj{N}` (Roadmap) em `.opencode/`.
